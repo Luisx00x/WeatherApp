@@ -8,7 +8,7 @@ async function useFetch (url, fn) {
         if(res.cod !== 200) throw Error(res.message);
         else fn(res)
       })
-      .catch(err => console.error("Ha ocurrido un problema. Intente de nuevo"))
+      .catch(err => console.error("Ha ocurrido un problema. Intente de nuevo:" + err.message))
   }catch(err){
     console.error(err)
   }
