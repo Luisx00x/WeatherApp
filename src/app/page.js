@@ -13,7 +13,7 @@ const Home = () => {
       <searchContext.Provider value={setCities}>
         <NavBar/>
         <h1>This is Home</h1>
-        <WeatherCards/>
+        <WeatherCards cities={cities} />
       </searchContext.Provider>
     </>
   )
