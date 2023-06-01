@@ -14,7 +14,8 @@ export function submitHandler(e, city, apiKey, setNewCity){
   useFetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`,
     (newCity => {
       setNewCity( prev => {
-        return [...prev, newCity]
+        if(!prev.find(city => city.id === newCity.id)) return [...prev, newCity]
+        else return prev
       })
     }))
 
