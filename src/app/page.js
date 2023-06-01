@@ -6,6 +6,7 @@ import { createContext, useState } from "react";
 export const searchContext = createContext();
 
 const Home = () => {
+  
   const [cities, setCities] = useState([]);
 
   return (
