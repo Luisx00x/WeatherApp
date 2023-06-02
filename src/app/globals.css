@@ -7,6 +7,23 @@ nav {
   padding: 1%;
 }
 
+@media (min-width: 1125px) {
+  .page{
+    width: 1126px;
+    margin: auto
+  }
+  .cards-container{
+    width: 950px;
+    margin: auto;
+    background-color: rgb(212, 212, 212);
+    padding: 0 1% 1%;
+  }
+  .cards{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 nav a {
   padding: 1% 2%;
   text-decoration: none;
@@ -22,4 +39,13 @@ nav a:hover{
   text-decoration: none;
   background-color: white;
   color: blue;
+}
+
+.cards-container{
+  background-color: rgb(212, 212, 212);
+  padding: 0 1% 1%;
+}
+.cards{
+  display: flex;
+  justify-content: space-around;
 }

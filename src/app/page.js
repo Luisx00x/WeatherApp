@@ -10,14 +10,17 @@ const Home = () => {
   const [cities, setCities] = useState([]);
 
   return (
-    <>
-
+    <div className={"page"}>
       <SearchContext.Provider value={setCities}>
         <NavBar/>
-        <h1>This is Home</h1>
-        <WeatherCards cities={cities} />
+        <div className="cards-container">
+          <h1>This is Home</h1>
+          <div className="cards">
+            <WeatherCards cities={cities} />
+          </div>
+        </div>
       </SearchContext.Provider>
-    </>
+    </div>
   )
 }
 
