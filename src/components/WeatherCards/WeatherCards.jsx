@@ -6,7 +6,7 @@ const WeatherCards = ({cities}) => {
       <>
         {
           cities.length<1 ? <div>No hay ciudades en la lista</div> :
-            cities?.map(city => <Cards city={city} key={city.id}/>)
+            cities?.map(city => <Cards city={city} key={city.id} />)
         }
       </>
     )

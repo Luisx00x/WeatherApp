@@ -9,10 +9,6 @@
   color: black;
 }
 
-.closeButton{
-  align-self: flex-end;
-}
-
 .title{
   margin: 0 0 15% 0;
 }
