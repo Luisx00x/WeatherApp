@@ -9,7 +9,7 @@ export function inputHandler(e, set){
   })
 }
 
-export function submitHandler(e, city, apiKey, setNewCity){
+export function submitHandler(e, city, apiKey, setNewCity, error){
   e.preventDefault();
   useFetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`,
     (newCity => {
@@ -17,6 +17,7 @@ export function submitHandler(e, city, apiKey, setNewCity){
         if(!prev.find(city => city.id === newCity.id)) return [...prev, newCity]
         else return prev
       })
-    }))
+    }), 
+    error)
 
 }
