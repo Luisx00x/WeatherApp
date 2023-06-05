@@ -8,10 +8,11 @@ nav {
 }
 
 @media (min-width: 1125px) {
-  .page{
-    width: 1126px;
-    margin: auto
+  nav{
+    margin: auto;
+    width: 1180px;
   }
+
   .cards-container{
     width: 950px;
     margin: auto;
