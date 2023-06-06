@@ -25,7 +25,11 @@ const SearchCity = () => {
       onChange={(e) => inputHandler(e, setInput)}
       />
 
-      <button onClick={(e) => submitHandler(e, input.searchInput, testApiKey, setNewCity.setCities, setNewCity.setNotFound)}>Buscar</button>
+      <button onClick={(e) => {
+        submitHandler(e, input.searchInput, testApiKey, setNewCity.setCities, setNewCity.setNotFound);
+        setInput( prev => { return {searchInput: ""}});
+        }
+      }>Buscar</button>
     </>
   )
 }

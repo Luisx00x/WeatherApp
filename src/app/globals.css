@@ -7,24 +7,6 @@ nav {
   padding: 1%;
 }
 
-@media (min-width: 1125px) {
-  nav{
-    margin: auto;
-    width: 1180px;
-  }
-
-  .cards-container{
-    width: 950px;
-    margin: auto;
-    background-color: rgb(212, 212, 212);
-    padding: 0 1% 1%;
-  }
-  .cards{
-    display: flex;
-    justify-content: space-around;
-  }
-}
-
 nav a {
   padding: 1% 2%;
   text-decoration: none;
@@ -49,4 +31,23 @@ nav a:hover{
 .cards{
   display: flex;
   justify-content: space-around;
+}
+
+/* Desktop */
+@media (min-width: 1180px) {
+  nav{
+    margin: auto;
+    width: 1180px;
+  }
+
+  .cards-container{
+    width: 950px;
+    margin: 1% auto;
+    background-color: rgb(212, 212, 212);
+    padding: 1%
+  }
+  .cards{
+    display: flex;
+    justify-content: space-around;
+  }
 }

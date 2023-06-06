@@ -10,7 +10,7 @@ export const SearchContext = createContext();
 const Home = () => {
   
   const [cities, setCities] = useState([]);
-  const [notFound, setNotFound] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   return (
     <div className={"page"}>
@@ -18,7 +18,6 @@ const Home = () => {
         {notFound ? <CityNotFound accept={setNotFound} /> : null}
         <NavBar/>
         <div className="cards-container">
-          <h1>This is Home</h1>
           <div className="cards">
             <WeatherCards cities={cities}/>
           </div>
