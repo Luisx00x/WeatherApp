@@ -7,7 +7,7 @@ import CloseButton from '../CloseButton/CloseButton';
 
 const Cards = ({city}) => {
   return (
-    <Link href={"/#"} className={s.container}>
+    <Link href={"/Details"} className={s.container}>
       <div key={city.id} className={s.container}>
         <CloseButton id={city.id}/>
         <span className={s.title}><b>{city.name}</b></span>

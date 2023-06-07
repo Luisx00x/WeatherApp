@@ -2,7 +2,7 @@ import s from './CityNotFound.module.css';
 
 const CityNotFound = ({accept}) => {
   return (
-    <div className={s.container}>
+    <div className={`modals`}>
       <div className={s.message}>
       <h2>No se ha encontrado una ciudad con ese nombre</h2>
       <button 
