@@ -1,3 +1,4 @@
+import { notFound } from "./consts";
 
 
 async function useFetch (url, fn, error) {
@@ -10,7 +11,12 @@ async function useFetch (url, fn, error) {
       })
       .catch(err => {
         console.error("Ha ocurrido un problema: " + err.message);
-        error( prev => true )
+        error( prev => {
+          return {
+            state: true,
+            name: notFound
+          }
+        })
       })
   }catch(err){
     console.error(err)
