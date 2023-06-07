@@ -23,9 +23,13 @@ const SearchCity = () => {
       placeholder="Ingrese la ciudad..." 
       value={input.searchInput}
       onChange={(e) => inputHandler(e, setInput)}
+      onKeyUp={(e) => {
+        if(e.key === 'Enter') submitHandler(e, input.searchInput, testApiKey, setNewCity.setCities, setNewCity.setModal);
+      }}
       />
 
-      <button onClick={(e) => {
+      <button 
+        onClick={(e) => {
         submitHandler(e, input.searchInput, testApiKey, setNewCity.setCities, setNewCity.setModal);
         setInput( prev => { return {searchInput: ""}});
         }
