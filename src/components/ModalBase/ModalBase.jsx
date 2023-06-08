@@ -2,10 +2,10 @@
 
 import useModal from "@/hooks/useModal";
 
-const ModalBase = ({type, set}) => {
+const ModalBase = ({type, set, cityId}) => {
   return (
     <>
-      {useModal(type, set)}
+      {useModal(type, set, cityId)}
     </>
   )
   }

@@ -4,9 +4,23 @@
   padding: 1% 2%;
   background-color: rgb(184, 184, 184);
   border-radius: 15px;
-  width: 100px;
+  width: 200px;
+  height: fit-content;
   text-decoration: none;
   color: black;
+  align-items: center;
+}
+
+.img{
+  vertical-align: top;
+  width: 50%;
+}
+
+.button{
+  margin: auto;
+  background-color: rgb(252, 252, 252);
+  padding: 2% 10%;
+  border-radius: 6px;
 }
 
 .title{
