@@ -13,7 +13,8 @@ const Home = () => {
   const [modal, setModal] = useState(
     {
       state: false,
-      name: ""
+      name: "",
+      details: null
     }
   );
 
@@ -21,7 +22,7 @@ const Home = () => {
     <div className={"page"}>
       <SearchContext.Provider value={{setCities, cities, setModal}}>
 
-        {modal.state && modal.name ? <ModalBase type={modal.name} set={setModal} /> : null}
+        {modal.state && modal.name ? <ModalBase type={modal.name} set={setModal} cityId={modal.details} /> : null}
 
         <NavBar/>
         <div className="cards-container">

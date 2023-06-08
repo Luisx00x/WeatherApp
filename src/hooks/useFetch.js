@@ -13,6 +13,7 @@ async function useFetch (url, fn, error) {
         console.error("Ha ocurrido un problema: " + err.message);
         error( prev => {
           return {
+            ...prev,
             state: true,
             name: notFound
           }
