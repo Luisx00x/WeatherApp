@@ -1,0 +1,27 @@
+
+.data{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.message{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: red;
+  width: 100%;
+}
+
+.window{
+  width: 80%;
+}
+
+.buttonContainer{
+  align-self: center;
+}
+
+.button{
+  padding: 10%;
+  border-radius: 5px;
+}

@@ -28,10 +28,12 @@ const Home = () => {
         modal.state && modal.name ? 
         <ModalBase type={modal.name} >
           <CityNotFound close={setModal}/>
-          <Details close={setModal} cityId={modal.details}/>
+          <Details close={setModal} city={modal.details}/>
         </ModalBase> 
         : null
         }
+
+        {console.log(modal)}
 
         <NavBar/>
         <div className="cards-container">
