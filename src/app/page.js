@@ -27,8 +27,8 @@ const Home = () => {
         {
         modal.state && modal.name ? 
         <ModalBase type={modal.name} >
-          <CityNotFound accept={setModal}/>
-          <Details confirm={setModal} cityId={modal.details}/>
+          <CityNotFound close={setModal}/>
+          <Details close={setModal} cityId={modal.details}/>
         </ModalBase> 
         : null
         }
