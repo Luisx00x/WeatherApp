@@ -4,6 +4,8 @@ import WeatherCards from "@/components/WeatherCards/WeatherCards";
 import { createContext, useState } from "react";
 import 'normalize.css';
 import ModalBase from "@/components/ModalBase/ModalBase";
+import CityNotFound from "@/components/Modals/CityNotFound/CityNotFound";
+import Details from "@/components/Modals/Details/Details";
 
 export const SearchContext = createContext();
 
@@ -22,7 +24,14 @@ const Home = () => {
     <div className={"page"}>
       <SearchContext.Provider value={{setCities, cities, setModal}}>
 
-        {modal.state && modal.name ? <ModalBase type={modal.name} set={setModal} cityId={modal.details} /> : null}
+        {
+        modal.state && modal.name ? 
+        <ModalBase type={modal.name} >
+          <CityNotFound accept={setModal}/>
+          <Details confirm={setModal} cityId={modal.details}/>
+        </ModalBase> 
+        : null
+        }
 
         <NavBar/>
         <div className="cards-container">

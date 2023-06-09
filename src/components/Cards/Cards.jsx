@@ -1,8 +1,6 @@
-import Link from 'next/link';
+
 import s from './Cards.module.css';
 import CloseButton from '../CloseButton/CloseButton';
-import useModal from '@/hooks/useModal';
-import { details } from '@/hooks/consts';
 import DetailsButton from '../DetailsButton/DetailsButton';
 
 //Iconos

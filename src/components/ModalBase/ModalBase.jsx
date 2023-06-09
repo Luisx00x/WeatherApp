@@ -1,12 +1,16 @@
 'use client'
 
-import useModal from "@/hooks/useModal";
+import { details, notFound } from "@/hooks/consts";
 
-const ModalBase = ({type, set, cityId}) => {
-  return (
-    <>
-      {useModal(type, set, cityId)}
-    </>
-  )
+const ModalBase = ({children, type}) => {
+
+  switch(type){
+    case notFound:
+      return ( children[0] );
+    case details:
+      return ( children[1]);
   }
+  
+}
+
 export default ModalBase;
