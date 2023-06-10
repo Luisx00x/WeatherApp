@@ -14,8 +14,9 @@ const Details = ({close, city}) => {
             <h2>{city.name}</h2>
             <p><b>Latitud:</b></p> <p>{city.coord.lat}</p>
             <p><b>Longitud:</b></p> <p>{city.coord.lon}</p>
-            <img src={`http://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="weatherIcon" />
           </div>
+
+            <img className={s.img} src={`http://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="weatherIcon" />
           
           <div className={s.data}>
             <span><b>Temperatura Actual </b>{city.main.temp}°</span>
