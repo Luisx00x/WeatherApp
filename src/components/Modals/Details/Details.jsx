@@ -10,10 +10,12 @@ const Details = ({close, city}) => {
         
         <div className={`${s.message}`}>
 
-          <div>
-            <h2>{city.name}</h2>
-            <p><b>Latitud:</b></p> <p>{city.coord.lat}</p>
-            <p><b>Longitud:</b></p> <p>{city.coord.lon}</p>
+          <div className={`${s.title}`}>
+            <h2 className={s.example}>{city.name}</h2>
+            <p className={s.example}><b>Latitud:</b></p> 
+            <p className={s.example}>{city.coord.lat}</p>
+            <p className={s.example}><b>Longitud:</b></p> 
+            <p className={s.example}>{city.coord.lon}</p>
           </div>
 
             <img className={s.img} src={`http://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="weatherIcon" />
@@ -23,7 +25,7 @@ const Details = ({close, city}) => {
             <span><b>Max Temp </b>{city.main.temp_max}°</span>
             <span><b>Min Temp </b>{city.main.temp_min}°</span>
             <span><b>Humedad </b>{city.main.humidity}%</span>
-            <span><b>Velocidad del viento </b>{city.wind.speed} Manzanas xdddd</span>
+            <span><b>Viento </b>{city.wind.speed}</span>
             <span><b></b></span>
           </div>
           
