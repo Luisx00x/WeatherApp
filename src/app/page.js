@@ -33,8 +33,6 @@ const Home = () => {
         : null
         }
 
-        {console.log(modal)}
-
         <NavBar/>
         <div className="cards-container">
           <div className="cards">
