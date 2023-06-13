@@ -11,11 +11,11 @@ const Details = ({close, city}) => {
         <div className={`${s.message}`}>
 
           <div className={`${s.title}`}>
-            <h2 className={s.example}>{city.name}</h2>
-            <p className={s.example}><b>Latitud:</b></p> 
-            <p className={s.example}>{city.coord.lat}</p>
-            <p className={s.example}><b>Longitud:</b></p> 
-            <p className={s.example}>{city.coord.lon}</p>
+            <h2 className={s.centerText}>{city.name}</h2>
+            <p className={s.centerText}><b>Latitud:</b></p> 
+            <p className={s.centerText}>{city.coord.lat}</p>
+            <p className={s.centerText}><b>Longitud:</b></p> 
+            <p className={s.centerText}>{city.coord.lon}</p>
           </div>
 
             <img className={s.img} src={`http://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`} alt="weatherIcon" />
