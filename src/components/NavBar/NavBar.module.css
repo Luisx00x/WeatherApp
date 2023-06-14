@@ -1,4 +1,30 @@
 
 .container{
+  flex-direction: column;
   background-color: gray;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 2%;
+  margin-bottom: 1%;
+}
+
+.title{
+  background-color: #f0f0F0;
+  margin: 2% 0;
+  padding: 1%;
+  border-radius: 6px;
+}
+
+
+@media (min-width: 1180px){
+
+  .container{
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  
+  .title{
+    margin: 0;
+  }
+
 }
