@@ -3,7 +3,7 @@ import { useContext, useState} from 'react';
 import { inputHandler, submitHandler } from './SearchCityHandlers';
 import { SearchContext } from '@/app/page';
 
-const testApiKey = "91d6b984ee1adf5114775201dd941300";
+const testApiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 const SearchCity = () => {
 
@@ -24,7 +24,10 @@ const SearchCity = () => {
       value={input.searchInput}
       onChange={(e) => inputHandler(e, setInput)}
       onKeyUp={(e) => {
-        if(e.key === 'Enter') submitHandler(e, input.searchInput, testApiKey, setNewCity.setCities, setNewCity.setModal);
+        if(e.key === 'Enter') {
+          submitHandler(e, input.searchInput, testApiKey, setNewCity.setCities, setNewCity.setModal);
+          setInput( prev => { return {searchInput: ""}});
+        }
       }}
       />
 
